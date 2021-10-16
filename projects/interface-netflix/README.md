@@ -1,6 +1,6 @@
 ### Interface Netflix
 
-Navegue pela página [clicando aqui](https://douglasbasilio.github.io/interface-netflix/ "clicando aqui")
+Navegue pela página [clicando aqui](https://douglasbasilio.github.io/projects/interface-netflix/ "clicando aqui")
 
 #### Linguagens utilizadas
 
