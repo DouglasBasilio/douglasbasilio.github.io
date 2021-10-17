@@ -12,6 +12,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
+
+/************
+*   HOME
+************/
+
 .home {
     background-image: url(../images/bg-home.jpg);
     background-size: cover; /*ajustar a imagem com o tamanho|proporção*/
@@ -34,8 +40,9 @@ body {
 
 .home .header .nav ul li {
     display: flex;
+    justify-content: center;
     align-items: center; /*alinhamento vertical dos itens*/
-    margin: 0 10px;
+    width: 150px;
 }
 
 .home .header .nav ul li a {
@@ -54,4 +61,39 @@ body {
 
 .home .header .nav ul li .logo {
     margin: 0 30px;
+}
+
+
+
+/****************
+*  HOME - BANNER
+****************/
+
+.home .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(80vh - 130px);
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.home .banner span {
+    display: block; /*empurra as tags para baixo, tipo a tag img ficará abaixo do último span*/
+}
+
+.home .banner .slogan1{
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;    
+}
+
+.home .banner h1 {
+    font-size: 120px;
+}
+
+.home .banner .slogan2{
+    margin-bottom: 15px;
 }
