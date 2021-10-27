@@ -259,6 +259,7 @@ body {
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 300px;
+    height: 100vh;
 }
 
 .appointment h2 {
@@ -322,4 +323,48 @@ body {
     margin-top: 10px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+
+/****************
+*     GALLERY
+*****************/
+
+.gallery {
+    padding: 100px 0;
+    background-color: var(--color-primary-light);
+}
+
+.gallery h2 {
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.gallery img {
+    margin: 0 auto;
+    display: block; /*img é inline*/
+}
+
+.gallery .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80vh;
+    max-width: 50vw;
+    margin: 50px auto;
+    justify-content: center;
+    /*border: 1px solid black;*/
+}
+
+.gallery .gallery-wrapper div {
+    border: 10px solid var(--color-primary);
+    margin: 6px;
+    width: 31%;
+}
+
+.gallery .gallery-wrapper div img {
+    width: 100%;
 }
