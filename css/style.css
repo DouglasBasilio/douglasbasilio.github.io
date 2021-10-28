@@ -1,3 +1,15 @@
+/*********
+*  ROOT
+*********/
+
+:root{
+    --color-primary: #0e2348;
+    --color-secondary: #3E64FF;
+    --color-white: #FFFFFF;
+    --color-light: #f5eee6;
+    --color-dark: #140f07;
+}
+
 /* reset */
 * {
     margin: 0;
@@ -5,61 +17,96 @@
     box-sizing: border-box;
 }
 
-html, .container {
-    height: 100%;
-}
-
 body {
     font-family: 'Raleway', sans-serif;
-    color: rgb(34, 34, 34);
-    /*https://cssgradient.io/*/
-    background: linear-gradient(176deg, rgba(209,220,233,1) 0%, rgba(19,60,96,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
 }
+
+/***************
+*  SCROOLLBAR
+***************/
+
+
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--color-light);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--color-light);  /* creates padding around scroll thumb */
+  }
+
 
 .container {
     max-width: 900px;
     margin: 0 auto;
 }
 
-.avatar {
-    width: 80px;
-    border-radius: 50px;
-    border: 3px solid #FFFFFF;
-    box-shadow: 0 0 20px #FFFFFF;
-}
+/************
+*  PROFILE
+************/
 
-h1 {
-    font-family: 'Architects Daughter', cursive;
-    font-weight: 100;
-    font-size: 24px;
-    margin-bottom: 2px;
-}
-
-h2 {
-    font-size: 16px;
-}
-
-.profile {
+.header .profile {
     margin-top: 20px;
     text-align: center;
 }
 
-/* flexbox */
-.social {
+.header .profile .avatar {
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
+}
+
+.header .profile h1 {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bolder;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.header .profile h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+/************
+*   SOCIAL
+************/
+
+.header .social {
     display: flex;
     justify-content: space-around; /*só funciona com o flex*/
     list-style: none;
     margin: 20px 0; /*20px top e bottom e 0px left e right*/
 }
 
-.social img {
+.header .social img {
     width: 33px;
-    transition: 0.6s;
+    transition: 0.3s;
+    filter: grayscale(50%)
 }
 
-.social img:hover {
+.header .social img:hover {
     width: 44px;
-    transition: 0.6s;
+    transition: 0.3s;
+}
+
+
+/************
+*   LINKS
+************/
+
+.linktree {
+    margin: 25px auto 50px auto;
 }
 
 .links-list {
@@ -73,29 +120,42 @@ h2 {
 
 .links-list li:hover {
     margin: 10px 5px;
-    opacity: 0.9;
     transition: 0.3s;
-    
 }
 
 .links-list li a {
     display: block; /*pois a tag 'a' é inline*/
-
     border-radius: 5px;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0 0 15px #FFFFFF;
+    border: 1px solid var(--color-primary);
+    
 
-    background: #FFFFFF;
+    background: rgba(49,49,49,1);
     padding: 15px 20px;
     text-decoration: none;
 
-    color: rgb(54,77,204);
-    font-weight: bold;
+    color: var(--color-light);
+    font-weight: 400;
+    font-size: 18px;
     
 }
 
 .links-list li a span {
     display: block;
-    color: grey;
     margin-top: 10px;
+    color: #B2FCFF;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+
+/****************
+*     FOOTER
+*****************/
+
+.footer {
+    background-color: var(--color-dark);
+    font-size: 12px;
+    color: var(--color-light);
+    padding: 30px;
+    text-align: center;
 }
