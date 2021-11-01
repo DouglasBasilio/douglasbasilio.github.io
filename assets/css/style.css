@@ -90,16 +90,8 @@ body::-webkit-scrollbar {
 }
 
 .header .social img {
-    width: 33px;
-    transition: 0.3s;
-    filter: grayscale(50%)
+    width: 60px;
 }
-
-.header .social img:hover {
-    width: 44px;
-    transition: 0.3s;
-}
-
 
 /************
 *   LINKS
@@ -136,7 +128,6 @@ body::-webkit-scrollbar {
     color: var(--color-light);
     font-weight: 400;
     font-size: 18px;
-    
 }
 
 .links-list li a span {
@@ -154,7 +145,7 @@ body::-webkit-scrollbar {
 
 .footer {
     background-color: var(--color-dark);
-    font-size: 12px;
+    font-size: 15px;
     color: var(--color-light);
     padding: 30px;
     text-align: center;
