@@ -3,4 +3,7 @@ Criei este repositório para centralizar alguns projetos que tenho feito para pr
 Cada pasta contém um link onde é possível ver o projeto.
 
 
-Link de exemplo: https://douglasbasilio.github.io/projects/projeto-barber-shop/
+Links de exemplo: 
+https://douglasbasilio.github.io/
+
+https://douglasbasilio.github.io/projects/projeto-barber-shop/
