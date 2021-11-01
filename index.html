@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/icons/linktreeicon.png" type="image/x-icon">
 
+    <script src="assets/js/app.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKSTWTF9FN"></script>
     <script>
@@ -39,12 +41,12 @@
                 </li>
                 <li>
                     <a href="https://www.instagram.com/basilio.douglas/" target="_blank">
-                        <img src="assets/icons/Instagram.png" alt="Instagram">
+                        <img src="assets/icons/Instagram.png" alt="Instagram" id="insta-icon" onmouseover='hoverInsta()' onmouseout='mouseOutInsta()'>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/douglasbasilio/" target="_blank">
-                        <img src="assets/icons/LinkedIn.png" alt="Linkedin">
+                        <img src="assets/icons/LinkedIn.png" alt="Linkedin" id="linkedin-icon" onmouseover='hoverLinkedin()' onmouseout='mouseOutLinkedin()'>
                     </a>
                 </li>
             </ul>
@@ -131,12 +133,3 @@
 </body>
 
 </html>
-
-<script>
-    function hoverWhats() {
-        document.getElementById("whatsapp-icon").src = "assets/icons/Whatsapp-1.png";
-    }
-    function mouseOutWhats() {
-        document.getElementById("whatsapp-icon").src = "assets/icons/Whatsapp.png";
-    }
-</script>
