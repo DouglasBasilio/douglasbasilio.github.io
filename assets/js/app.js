@@ -5,7 +5,7 @@ function hoverWhats() {
 }
 
 function mouseOutWhats() {
-    document.getElementById("whatsapp-icon").src = "assets/icons/whatsapp.webp";
+    document.getElementById("whatsapp-icon").src = "assets/icons/Whatsapp.webp";
 }
 
 /*Instagram*/
