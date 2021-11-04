@@ -143,9 +143,9 @@ body::-webkit-scrollbar-thumb {
   width: 50px;
 }
 .about .timing h3 {
-  color: var(#917758);
+  color: #917758;
   text-transform: uppercase;
-  border-bottom: 1px solid var(#917758);
+  border-bottom: 1px solid #917758;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -160,7 +160,7 @@ body::-webkit-scrollbar-thumb {
   content: "•";
   display: block;
   /*obrigatoriamente no 'after', precisamos definir um display*/
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 25px;
   margin-top: 10px;
 }
@@ -174,7 +174,7 @@ body::-webkit-scrollbar-thumb {
 }
 .about .timing .text span {
   display: block;
-  color: var(#FFFFFF);
+  color: #FFFFFF;
   font-size: 15px;
 }
 .about .experience {
