@@ -164,7 +164,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 25px;
   margin-top: 10px;
 }
-.about .timing .text:last-of-type::after {
+.about .timing .text:last-of-type:after {
   content: "|";
 }
 .about .timing .text h4 {
@@ -172,7 +172,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-size: 15px;
 }
-.about .timing .text span {
+.about .timing span {
   display: block;
   color: #FFFFFF;
   font-size: 15px;
