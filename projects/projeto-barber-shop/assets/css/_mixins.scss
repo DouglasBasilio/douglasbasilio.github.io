@@ -1,0 +1,25 @@
+@import 'variables';
+
+@mixin appointment-measure {
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+@mixin h2-primary-light {
+    color: $color-primary-light;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@mixin h2-secondary {
+    color: $color-secondary;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
