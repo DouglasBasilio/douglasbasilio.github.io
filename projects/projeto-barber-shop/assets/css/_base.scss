@@ -33,3 +33,13 @@ body::-webkit-scrollbar {
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid $color-secondary;  /* creates padding around scroll thumb */
   }
+
+/**************
+*  CONTAINER
+**************/
+
+
+.container {
+  width: 1170px;
+  margin: 0 auto; /*centralizar*/
+}
