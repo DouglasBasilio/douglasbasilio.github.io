@@ -3,45 +3,10 @@
 @import 'variables';
 @import 'home';
 @import 'about';
+@import 'services';
 
 
 
-/****************
-*     SERVICES
-*****************/
-
-.services {
-    padding: 100px 0;
-    text-align: center;
-    background-color: $color-primary-light;
-
-    h2 {
-        @include h2-secondary;
-    }
-
-    .boxes {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
-    }
-
-    .box {
-        border: 3px solid $color-primary;
-        padding: 50px 40px;
-        margin: 30px;
-
-        h4 {
-            color: $color-secondary;
-            margin-top: 30px;
-        }
-
-        p {
-            margin-top: 20px;
-            font-size: 14px;
-            line-height: 25px;
-        }
-    }
-}
 
 /****************
 *   APPOINTMENT
