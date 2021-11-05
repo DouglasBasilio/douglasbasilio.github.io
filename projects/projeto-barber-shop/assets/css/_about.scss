@@ -1,0 +1,102 @@
+@import 'variables';
+
+/****************
+*     ABOUT
+*****************/
+
+.about {
+    background-color: $color-primary;
+
+    .container {
+        display: flex;
+    }
+
+    .timing {
+        position: relative;
+        top: -50px;
+        width: 33%;
+        padding: 20px;
+        background-image: url(../images/brush-big.jpg);
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .icon-cut {
+            width: 50px;
+        }
+
+        h3 {
+            color: $color-primary;
+            text-transform: uppercase;
+            border-bottom: 1px solid $color-primary;
+            width: fit-content; /*tamanho do H3 seja do tamanho do conteúdo*/
+            margin: 0 auto 30px auto;
+            font-size: 30px;
+        }
+
+        .text {
+            margin: 10px 0;
+
+            &::after {
+                content: '•';
+                display: block; /*obrigatoriamente no 'after', precisamos definir um display*/
+                color: $color-white;
+                font-size: 25px;
+                margin-top: 10px;
+            }
+
+            &:last-of-type:after {
+                content: '|';
+            }
+
+            h4 {
+                color: gray;
+                font-weight: 400;
+                font-size: 15px;
+            }
+        }
+
+        span {
+            display: block;
+            color: $color-white;
+            font-size: 15px;
+        }
+
+    }
+
+    .experience {
+        width: 66%;
+        color: $color-white;
+        margin-left: 7%;
+        margin-top: 100px;
+
+        h2 {
+            font-weight: 400;
+            font-size: 40px;
+
+            &::after {
+                display: block;
+                content: '';
+                width: 100px;
+                height: 3px;
+                background-color: #a38f78;
+                margin: 20px 0;
+            }
+        }
+
+        .text {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                margin-bottom: 20px;
+                font-weight: 100;
+                font-size: 17px;
+                text-align: justify;
+            }
+        }
+    }
+}
