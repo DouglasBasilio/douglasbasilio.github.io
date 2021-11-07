@@ -9,8 +9,6 @@
 @import 'gallery';
 @import 'location';
 
-
-
 /****************
 *     FOOTER
 *****************/
@@ -21,4 +19,146 @@
     color: $color-white;
     padding: 40px;
     text-align: center;
+}
+
+/****************
+*   RESPONSIVE
+*****************/
+
+@media (max-width: 1170px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .home {
+        @include padding-default;
+
+        .header {
+            .nav {
+                ul {
+                    display: none;
+                }
+            }
+        }
+
+        .banner {
+            .slogan1 {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+            h1 {
+                font-size: 3.5em;
+            }
+
+            .slogan2 {
+                font-size: 1em;
+            }
+        }
+    }
+
+    .about {
+        display: flex;
+        text-align: center;
+        @include padding-default;
+
+        .timing {
+            display: none;
+        }
+
+        .experience {
+            width: 100%;
+            padding: 30px;
+            margin: 0 auto;
+
+            .text {
+                p {
+                    font-weight: 400;
+                }
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .services {
+        @include padding-default;
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 5em;
+        }
+    }
+
+    .appointment {
+        display: block;
+        height: 100%;
+        @include padding-default;
+
+        h2 {
+            font-size: 2em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 1em;
+            padding: 20px;
+        }
+
+        .personal-data {
+            display: grid;
+        }
+    }
+
+    .gallery {
+        @include padding-default;
+
+        h2 {
+            font-size: 2em;
+        }
+
+        .gallery-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            height: 50%;
+
+            div {
+                width: 100%;
+            }
+        }
+    }
+
+    .location {
+        @include padding-default;
+
+        .head {
+            display: block;
+
+            .info {
+                margin-bottom: 1em;
+            }
+        }
+
+        .map {
+            padding: 0 15px;
+        }
+    }
+
+    .footer {
+        font-size: 1em;
+    }
 }
