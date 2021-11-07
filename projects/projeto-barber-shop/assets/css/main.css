@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb {
 *  CONTAINER
 **************/
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   /*centralizar*/
 }
@@ -220,6 +220,11 @@ body::-webkit-scrollbar-thumb {
   font-size: 50px;
   margin-bottom: 10px;
   text-align: center;
+}
+.services img {
+  display: block;
+  /*img é inline*/
+  margin: 0 auto;
 }
 .services .boxes {
   display: flex;
@@ -405,4 +410,117 @@ body::-webkit-scrollbar-thumb {
   color: #FFFFFF;
   padding: 40px;
   text-align: center;
+}
+
+/****************
+*   RESPONSIVE
+*****************/
+@media (max-width: 1170px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .home {
+    padding: 50px 0;
+  }
+  .home .header .nav ul {
+    display: none;
+  }
+  .home .banner .slogan1 {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  .home .banner h1 {
+    font-size: 3.5em;
+  }
+  .home .banner .slogan2 {
+    font-size: 1em;
+  }
+
+  .about {
+    display: flex;
+    text-align: center;
+    padding: 50px 0;
+  }
+  .about .timing {
+    display: none;
+  }
+  .about .experience {
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+  }
+  .about .experience .text p {
+    font-weight: 400;
+  }
+  .about .experience img {
+    display: none;
+  }
+
+  .services {
+    padding: 50px 0;
+  }
+  .services .boxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .services h2 {
+    font-size: 2em;
+  }
+  .services p {
+    font-size: 5em;
+  }
+
+  .appointment {
+    display: block;
+    height: 100%;
+    padding: 50px 0;
+  }
+  .appointment h2 {
+    font-size: 2em;
+  }
+  .appointment form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    padding: 20px;
+  }
+  .appointment .personal-data {
+    display: grid;
+  }
+
+  .gallery {
+    padding: 50px 0;
+  }
+  .gallery h2 {
+    font-size: 2em;
+  }
+  .gallery .gallery-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50%;
+  }
+  .gallery .gallery-wrapper div {
+    width: 100%;
+  }
+
+  .location {
+    padding: 50px 0;
+  }
+  .location .head {
+    display: block;
+  }
+  .location .head .info {
+    margin-bottom: 1em;
+  }
+  .location .map {
+    padding: 0 15px;
+  }
+
+  .footer {
+    font-size: 1em;
+  }
 }/*# sourceMappingURL=main.css.map */
