@@ -1,18 +1,25 @@
 @import 'variables';
 
-%box-shadow{
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+%border {
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
 } 
+
+%box-shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 %input {
     width: 100%;
     height: 40px;
-    border-radius: 8px;
+    @extend %border;
     outline: none;
-    border: 2px solid #c4c4c4;
     padding: 0 30px;
-    @extend %box-shadow;
 }
+
+/**************
+* SUBMIT BTN
+**************/
 
 %submit-button {
     margin-top: 15px;
@@ -26,4 +33,27 @@
     cursor: pointer;
     @extend %box-shadow;
     transition: all 0.1 ease;
+}
+
+/**************
+* SOCIAL BTNS
+**************/
+
+%flex-social-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+%socials-btn {
+    padding: 10px 5px;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    @extend %border;
+    @extend %box-shadow;
+    cursor: pointer;
 }

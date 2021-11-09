@@ -8,19 +8,52 @@ body {
   font-family: sans-serif;
 }
 
-form, form button, form div input {
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f2796e;
+  width: 55%;
+  min-height: 100vh;
+  padding: 10px 20px;
+}
+.content .image {
+  background-image: url("../img/illustration.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 65%;
+}
+.content .text {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+form .social .btn .btn-1, form .social .btn .btn-2, form div input {
+  border: 2px solid #c4c4c4;
+  border-radius: 8px;
+}
+
+form, form .social .btn .btn-1, form .social .btn .btn-2, form button {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 form div input {
   width: 100%;
   height: 40px;
-  border-radius: 8px;
   outline: none;
-  border: 2px solid #c4c4c4;
   padding: 0 30px;
 }
 
+/**************
+* SUBMIT BTN
+**************/
 form button {
   margin-top: 15px;
   width: 100%;
@@ -34,12 +67,47 @@ form button {
   transition: all 0.1 ease;
 }
 
+/**************
+* SOCIAL BTNS
+**************/
+form .social .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+form .social .btn .btn-1, form .social .btn .btn-2 {
+  padding: 10px 5px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 400px;
+  width: 45%;
+  max-width: none;
   padding: 50px;
+}
+form .social .question {
+  font-size: 15px;
+}
+form .social .question span {
+  color: #f2796e;
+  cursor: pointer;
+}
+form .social .btn .btn-2 {
+  background-color: #4f70b5;
+  color: white;
+}
+form .social .or {
+  text-align: center;
 }
 form .title {
   font-size: 25px;

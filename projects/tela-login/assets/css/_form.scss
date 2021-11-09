@@ -1,13 +1,43 @@
 @import 'extends';
 @import 'variables';
 
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 400px;
+    width: 45%;
+    max-width: none;
     @extend %box-shadow;
     padding: 50px;
+
+    .social {
+        .question {
+            font-size: 15px;
+
+            span {
+                color: $color-primary;
+                cursor: pointer;
+            }
+        }
+
+        .btn {
+            @extend %flex-social-btn;
+
+            .btn-1, .btn-2 {
+                @extend %socials-btn;
+            }
+
+            .btn-2 {
+                background-color: #4f70b5;
+                color: white;
+            }
+        }
+
+        .or {
+            text-align: center;
+        }
+    }
 
     .title {
         font-size: 25px;
