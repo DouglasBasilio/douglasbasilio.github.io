@@ -1,0 +1,29 @@
+@import 'variables';
+
+%box-shadow{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+%input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    @extend %box-shadow;
+}
+
+%submit-button {
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    @extend %box-shadow;
+    transition: all 0.1 ease;
+}
