@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script 
+    src="https://kit.fontawesome.com/fa05a7bcd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="" id="form">
+            <div class="title">Get Started</div>
+
+            <!-- User name input -->
+            <div>
+                <label for="username">Usuário</label>
+                <i class="fas fa-user"></i>
+                
+                <input 
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="login"                
+                />
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+
+            </div>
+
+            <!-- Email input -->
+            <div>
+                <label for="email">E-mail</label>
+                <i class="far fa-envelope"></i>
+
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email"
+                    placeholder="example@gmail.com"
+                />
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+
+            </div>
+
+            <!-- Password Input -->
+            <div>
+                <label for="password">Senha</label>
+                <i class="fas fa-lock"></i>
+
+                <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    placeholder="senha"
+                />
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+            </div>
+
+            <button id="btn" type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
