@@ -2,7 +2,7 @@
 
 let id = (id) => document.getElementById(id);
 
-let classes = (classes) => document.getElementById(classes);
+let classes = (classes) => document.getElementsByClassName(classes);
 
 /* armazenar as classes e Id dentro das variáveis */
 
@@ -44,7 +44,7 @@ let engine = (id, serial, message) => {
     }
     else {
         errorMsg[serial].innerHTML = "";
-        id.style.border = "2px solid gree";
+        id.style.border = "2px solid green";
 
         // icons
         failureIcon[serial].style.opacity = "0";
