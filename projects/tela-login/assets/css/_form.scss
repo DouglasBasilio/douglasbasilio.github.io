@@ -29,7 +29,7 @@ form {
             }
 
             .btn-2 {
-                background-color: #4f70b5;
+                background-color: #1877F2;
                 color: white;
             }
         }
@@ -94,5 +94,35 @@ form {
         &:hover {
             opacity: 0.8;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    form, .content {
+        width: 100%;
+    }
+
+    form {
+        .social {
+            .btn {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .content{    
+        .image {
+            height: 70vh;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    form {
+        padding: 20px;
     }
 }
