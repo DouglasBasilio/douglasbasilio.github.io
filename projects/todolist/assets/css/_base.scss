@@ -1,0 +1,40 @@
+@import 'variables';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700");
+
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(238.72deg, #FFB864 0%, #006C4C 100%), radial-gradient(100% 224.43% at 0% 0%, #FCC482 0%, #002E74 100%), linear-gradient(121.28deg, #FFD464 0%, #00553B 100%), linear-gradient(229.79deg, #7534FF 0%, #248900 94.19%), radial-gradient(56.26% 101.79% at 50% 0%, #8F00FF 0%, #493500 100%), linear-gradient(96.19deg, #500052 3.37%, #D5B300 96.63%);
+    background-blend-mode: overlay, screen, lighten, hard-light, screen, normal;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.todolist {
+    width: 100%;
+    max-width: 600px;
+
+    footer {
+        background-color: $bg-color-footer;
+
+        input{
+            background-color: $bg-color-footer;
+            border: none;
+            outline: none;
+            width: 90%;
+            padding: 20px;
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-size: 1.2em;
+            color: white;
+        }
+    }
+}
