@@ -1,11 +1,16 @@
 //main object
 
 const Main = {
+    tasks: [],
+
     // responsável por iniciar, fazer o cache dos seletores
     // a palavra this está se referenciando ao Main, ao pai do nosso objeto
     init: function(){
         this.cacheSelectors()
         this.bindEvents()
+        this.getStoraged()
+        this.buildTasks()
+        //console.log(this.tasks)
     },
 
     // responsável por selecionar os elementos do HTML e armazenar dentro de uma variável
@@ -28,12 +33,46 @@ const Main = {
             button.onclick = self.Events.checkButton_click
         })
 
-        //bind(this) - levar o THIS para dentro da função de enveto
+        //bind(this) - levar o THIS para dentro da função de evento
         this.$inputTask.onkeypress = self.Events.inputTask_keypress.bind(this)
 
         this.$removeButtons.forEach(function(button){
-            button.onclick = self.Events.removeButton_click
+            button.onclick = self.Events.removeButton_click.bind(self)
         })
+    },
+
+    // responsável por fazer o get do item task e armazenar num array
+    getStoraged: function(){
+        const tasks = localStorage.getItem('tasks')
+        // pego o string e transformo em objeto
+        this.tasks = JSON.parse(tasks)
+    },
+
+    getTaskHtml: function(task){
+        return `
+                    <li>
+                        <div class="check"></div>
+                        <label class="task">
+                            ${task}
+                        </label>
+                        <button class="remove" data-task="${task}"></button>
+                    </li>
+                `
+    },
+
+    // pegar as tarefas e montar na tela
+    buildTasks: function(){
+        let html = ''
+
+        // percorrer o Array
+        this.tasks.forEach(item => {
+            html += this.getTaskHtml(item.task)
+        })
+
+        this.$list.innerHTML = html
+
+        this.cacheSelectors()
+        this.bindEvents()
     },
 
     Events:{
@@ -54,26 +93,36 @@ const Main = {
 
             if(key === 'Enter'){
                 
-                this.$list.innerHTML += `
-                    <li>
-                        <div class="check"></div>
-                        <label for="" class="task">
-                            ${value}
-                        </label>
-                        <button class="remove"></button>
-                    </li>
-                `
+                this.$list.innerHTML += this.getTaskHtml(value)
 
                 e.target.value = ''
 
                 // sempre que modificar o HTML, esses itens estão sem o evento, por isso preciso rodar novamente as funções abaixo
                 this.cacheSelectors()
                 this.bindEvents()
+
+                const savedTasks = localStorage.getItem('tasks')
+                const savedTasksObj = JSON.parse(savedTasks) // lista de tarefas salvas
+
+                // criar um array para o localStorage
+                const obj = [
+                    { task: value },
+                    ...savedTasksObj, //spread operator
+                ]
+
+                // armazenar o objeto
+                localStorage.setItem('tasks', JSON.stringify(obj))
             }
         },
 
         removeButton_click:function(e){
-            let li = e.target.parentElement
+            const li = e.target.parentElement
+            const value = e.target.dataset['task']
+            //console.log(e.target.dataset['task'])
+
+            const newTasksState = this.tasks.filter(item => item.task !== value)
+
+            localStorage.setItem('tasks', JSON.stringify(newTasksState))
 
             li.classList.add('removed')
 
